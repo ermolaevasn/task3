@@ -10,14 +10,14 @@ namespace задание3
     {
         static void Main(string[] args)
         {
-            double x = 0,y=0;
-            VvodPoint("координата х", out x);
-            VvodPoint("координата у", out y);
-            if ((x * x + y * y <= 1) && (x * x + y * y >= 0.25)) Console.WriteLine("Точка принадлежит");
+            double x = 0,y=0;//переменные для координат
+            VvodPoint("координата х", out x);//вводим координату х
+            VvodPoint("координата у", out y);//вводим координату у
+            if ((x * x + y * y <= 1) && (x * x + y * y >= 0.25)) Console.WriteLine("Точка принадлежит");//проверка принадлежности
                 else Console.WriteLine("Точка не принадлежит");
             Console.ReadKey();                           
         }
-        static double VvodPoint(string s, out double n)//Вввод размера массива
+        static double VvodPoint(string s, out double n)//Функция для ввода координат, с проверской на ввод
         {
             bool ok;
             string buf;
